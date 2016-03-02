@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="edu.westga.c26242.greeter.MainActivity"
+    tools:context="edu.westga.cs6242.greeter.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <EditText
@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/greet_edit_text"
         android:layout_centerHorizontal="true"
+        android:onClick="didTapGreetButton"
         android:text="@string/greet_button" />
 
     <TextView

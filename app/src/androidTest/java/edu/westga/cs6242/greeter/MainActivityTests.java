@@ -6,8 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivityTests extends
-        ActivityInstrumentationTestCase2<MainActivity> {
+public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActivity> {
     public MainActivityTests() {
         super(MainActivity.class);
     }
