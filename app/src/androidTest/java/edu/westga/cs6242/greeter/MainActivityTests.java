@@ -1,6 +1,7 @@
 package edu.westga.cs6242.greeter;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.widget.EditText;
 
 public class MainActivityTests extends
         ActivityInstrumentationTestCase2<MainActivity> {
@@ -11,5 +12,26 @@ public class MainActivityTests extends
     public void testActivityExists() {
         MainActivity activity = getActivity();
         assertNotNull(activity);
+    }
+
+    public void testGreet() {
+        MainActivity activity = getActivity();
+
+        // Type name in text input
+        // ----------------------
+
+        final EditText nameEditText =
+                (EditText) activity.findViewById(R.id.greet_edit_text);
+
+        // Send string input value
+        getInstrumentation().runOnMainSync(new Runnable() {
+            @Override
+            public void run() {
+                nameEditText.requestFocus();
+            }
+        });
+
+        getInstrumentation().waitForIdleSync();
+        getInstrumentation().sendStringSync("Jake");
     }
 }
