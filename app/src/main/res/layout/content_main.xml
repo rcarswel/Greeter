@@ -35,6 +35,7 @@
         android:layout_below="@+id/greet_button"
         android:layout_centerHorizontal="true"
         android:enabled="false"
+        android:onClick="didTapReveseButton"
         android:text="@string/reverse_button" />
 
     <TextView

@@ -68,4 +68,14 @@ public class MainActivity extends AppCompatActivity {
         Button reverseButton = (Button) findViewById(R.id.reverse_button);
         reverseButton.setEnabled(true);
     }
+
+    public void didTapReveseButton(View view) {
+        TextView messageTextView =
+                (TextView) findViewById(R.id.message_text_view);
+
+        String messageString = messageTextView.getText().toString();
+        StringBuilder stringBuilder = new StringBuilder(messageString);
+        stringBuilder.reverse();
+        messageTextView.setText(stringBuilder.toString());
+    }
 }
