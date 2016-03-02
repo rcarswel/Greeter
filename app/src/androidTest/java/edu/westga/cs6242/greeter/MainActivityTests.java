@@ -1,6 +1,8 @@
 package edu.westga.cs6242.greeter;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.TouchUtils;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivityTests extends
@@ -33,5 +35,14 @@ public class MainActivityTests extends
 
         getInstrumentation().waitForIdleSync();
         getInstrumentation().sendStringSync("Jake");
+        getInstrumentation().waitForIdleSync();
+
+        // Tap "Greet" button
+        // ----------------------
+
+        Button greetButton =
+                (Button) activity.findViewById(R.id.greet_button);
+
+        TouchUtils.clickView(this, greetButton);
     }
 }
