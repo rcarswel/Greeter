@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         reverseButton.setEnabled(true);
     }
 
-    public void didTapReveseButton(View view) {
+    public void didTapReverseButton(View view) {
         TextView messageTextView =
                 (TextView) findViewById(R.id.message_text_view);
 
